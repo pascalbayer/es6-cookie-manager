@@ -9,14 +9,12 @@ export class CookieManager {
         // Allows for setter injection in unit tests
         this._document = window.document;
         // Used to ensure cookie keys do not collide with built-in `Object` properties
-        this._cacheKeyPrefix = 'cookie_manager';
+        this._cacheKeyPrefix = 'cookie_manager.';
         this._maxExpireDate = new Date('Fri, 31 Dec 9999 23:59:59 UTC');
         this._defaults = {
             path: '/',
             secure: false
         };
-
-        return arguments.length === 1 ? this.get(key) : arguments.length === 0 ? this : this.set(key, value, options);
     }
 
     get (key) {
