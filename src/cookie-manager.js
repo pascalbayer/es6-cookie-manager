@@ -1,3 +1,5 @@
+/* Based on https://github.com/ScottHamper/Cookies, 1.2.1 */
+
 export class CookieManager {
     constructor(key, value, options) {
         if (typeof window.document !== 'object') {
