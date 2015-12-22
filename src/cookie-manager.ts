@@ -1,7 +1,7 @@
 /* Based on https://github.com/ScottHamper/Cookies, 1.2.1 */
 
 export class CookieManager {
-    constructor(key, value, options) {
+    constructor (key, value, options) {
         if (typeof window.document !== 'object') {
             throw new Error('CookieManager requires a `window` with a `document` object');
         }
